@@ -1,0 +1,9 @@
+PG_MODE=primary
+PG_PRIMARY_USER=postgres
+PG_PRIMARY_PASSWORD=datalake
+PG_DATABASE=hippo
+PG_USER=hippo
+PG_PASSWORD=datalake
+PG_ROOT_PASSWORD=datalake
+PG_PRIMARY_PORT=5432
+MODE=postgres
