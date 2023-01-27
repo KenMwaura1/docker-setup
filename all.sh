@@ -9,9 +9,9 @@ echo "Current directory: $DIR"
 # SHOW ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
 echo "Shell scripts in the current directory:"
 find $DIR -type f -name "*.sh" -exec basename {} \;
-break
 
-count1=ls -1 *.sh 2>/dev/null | wc -l
+# Count the number of shell scripts in the current directory
+count1=ls -l *.sh | wc -l
 for file in $DIR/*.sh
 do
 	echo "Running $file"
@@ -19,7 +19,7 @@ do
 	count1=$((count1 + 1))
 done
 
-echo "Found $count11 shell scripts"
+echo "Found $count1 shell scripts"
 
 
 # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
