@@ -4,6 +4,9 @@ This repo holds the config files and commands to spin up development containers 
 
 **Note**: This is a work in progress. I will be adding more containers as I go along. Feel free to contribute! 
 
+## Table of Contents
+
+
 ### Prerequisites
 
 - [Docker](https://docs.docker.com/install/linux/docker-ce/)
@@ -40,6 +43,12 @@ The shell scripts in the root directory are used to spin up the containers. The 
 ```bash		
 ./mongo.sh
 ```
+Ensure the script is executable by running the following command:
+
+```bash
+chmod +x mongo.sh
+```
+
 
 ## MongoDB Compass
 
@@ -89,6 +98,24 @@ password: datalake
 To use your own custom credentials for postgres, edit the `pg-env.list` file in the `postgres-pgadmin` directory.
 
 To use your own custom credentials for pgAdmin, edit the `pgadmin-env.list` file in the `postgres-pgadmin` directory.
+
+## Redis
+
+Cd into the `redis` directory and run the following command to build the docker image for the redis container then start the container:
+
+```bash
+./redis.sh
+```
+
+## RUN ALL CONTAINERS ---> **Not Recommended!**
+
+In the root directory, run the following command to spin up all the containers:
+
+```bash
+./all.sh
+```
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
