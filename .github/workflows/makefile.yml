@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Cd folder
-      run: cd mongo-comapass-docker
+      run: cd mongo-compass-docker
 
     - name: configure
       run: ./configure
