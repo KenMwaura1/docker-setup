@@ -15,10 +15,6 @@ This repo holds the config files and commands to spin up development containers 
 	- [Currently Supported Containers](#currently-supported-containers)
 		- [Prerequisites](#prerequisites)
 	- [Running the containers](#running-the-containers)
-	- [MongoDB Compass](#mongodb-compass)
-	- [Usage](#usage)
-		- [Build](#build)
-		- [Run](#run)
 	- [Postgres \& pgAdmin](#postgres--pgadmin)
 	- [Redis](#redis)
 	- [RUN ALL CONTAINERS ---\> **Not Recommended!**](#run-all-containers-----not-recommended)
@@ -82,28 +78,6 @@ Ensure the script is executable by running the following command:
 
 ```bash
 chmod +x mongo.sh
-```
-
-## MongoDB Compass
-
-## Usage
-
-### Build
-
-Run the following command to build the docker image for the mongo compass container. This will take a while the first time you run it.
-
-```bash
-make build
-```
-
-### Run
-
-To bring up X-11 Desktop of Mongodb-Compass:
-
-Cd into the mongo-compass-docker directory and run the following command:
-
-```bash
-./run.sh
 ```
 
 ## Postgres & pgAdmin
