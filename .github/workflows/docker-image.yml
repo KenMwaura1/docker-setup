@@ -21,11 +21,11 @@ jobs:
     - name: Make all the scripts executable
       run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
           chmod +x *.sh
-      shell: bash
+      shell: bash -l {0}
     - name: Running the postgres & pgadmin scripts
       run: # RUN POSTGRES SCRIPTS IN THE CURRENT DIRECTORY
           ./postgres.sh
-      shell: bash
+      shell: bash -l {0}
     - name: Stop all running containers
       run:
           ./stop.sh
