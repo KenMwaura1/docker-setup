@@ -1,13 +1,41 @@
 # docker-setup
 
-This repo holds the config files and commands to spin up development containers for my personal setup. 
+This repo holds the config files and commands to spin up development containers for my personal setup.
 
 [![Script Test CI](https://github.com/KenMwaura1/docker-setup/actions/workflows/script-test.yml/badge.svg)](https://github.com/KenMwaura1/docker-setup/actions/workflows/script-test.yml)
 
-**Note**: This is a work in progress. I will be adding more containers as I go along. Feel free to contribute! 
+**Note**: This is a work in progress. I will be adding more containers as I go along. Feel free to contribute!
 
 ## Table of Contents
 
+- [docker-setup](#docker-setup)
+	- [Table of Contents](#table-of-contents)
+	- [Currently Supported Containers](#currently-supported-containers)
+		- [Prerequisites](#prerequisites)
+	- [Running the containers](#running-the-containers)
+	- [MongoDB Compass](#mongodb-compass)
+	- [Usage](#usage)
+		- [Build](#build)
+		- [Run](#run)
+	- [Postgres \& pgAdmin](#postgres--pgadmin)
+	- [Redis](#redis)
+	- [RUN ALL CONTAINERS ---\> **Not Recommended!**](#run-all-containers-----not-recommended)
+	- [Contributing](#contributing)
+
+## Currently Supported Containers
+
+- [MongoDB](https://www.mongodb.com/)
+- [Postgres](https://www.postgresql.org/)
+- [pgAdmin](https://www.pgadmin.org/)
+- [Redis](https://redis.io/)
+- [mysql](https://www.mysql.com/)
+- [portainer](https://www.portainer.io/)
+- [ghost](https://ghost.org/)
+- [wordpress](https://wordpress.org/)
+- [influxdb](https://www.influxdata.com/)
+- [grafana](https://grafana.com/)
+- [prometheus](https://prometheus.io/)
+  
 
 ### Prerequisites
 
@@ -25,14 +53,14 @@ Windows users can use [WSL](https://docs.microsoft.com/en-us/windows/wsl/install
 
 Optionally, on windows you can use [Docker Desktop](https://www.docker.com/products/docker-desktop) to run the containers. This is the easiest way to get started. Copy paste the commands in the scripts into the terminal.
 
-
 First clone the repo and cd into the directory
 
 ```bash
 git clone https://github.com/KenMwaura1/docker-setup
 cd docker-setup
 ```
-make sure you have the latest version of docker-compose. 
+
+make sure you have the latest version of docker-compose.
 follow the instructions [here](https://docs.docker.com/compose/install/) to install it.
 For arch linux users, run the following command:
 
@@ -42,15 +70,15 @@ sudo pacman -S docker-compose
 
 The shell scripts in the root directory are used to spin up the containers. The scripts are named after the service they spin up. For example, to spin up the mongo container, run the following command:
 
-```bash		
+```bash  
 ./mongo.sh
 ```
+
 Ensure the script is executable by running the following command:
 
 ```bash
 chmod +x mongo.sh
 ```
-
 
 ## MongoDB Compass
 
@@ -70,14 +98,13 @@ To bring up X-11 Desktop of Mongodb-Compass:
 
 Cd into the mongo-compass-docker directory and run the following command:
 
-```bash 
+```bash
 ./run.sh
 ```
 
 ## Postgres & pgAdmin
 
 Cd into the `postgres-pgadmin` directory and run the following command to build the docker images for the postgres & pgadmin then start the containers:
-
 
 ```bash
 ./postgres.sh
@@ -117,8 +144,6 @@ In the root directory, run the following command to spin up all the containers:
 ./all.sh
 ```
 
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
