@@ -21,9 +21,10 @@ jobs:
       run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
           chmod +x *.sh
       shell: bash
-    - name: Running the all the Scripts
+    - name: Running the all the postgres Scripts
       run: # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
-          ./all.sh
+          cd postgres-pgadmin
+          ./postgres.sh
       shell: bash
     - name: Stop all running containers
       run:
