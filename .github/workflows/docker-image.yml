@@ -16,16 +16,14 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Change into postgres-pgadmin directory
-      run: # CHANGE INTO THE POSTGRES-PGADMIN4 DIRECTORY
+      run: | # CHANGE INTO THE POSTGRES-PGADMIN4 DIRECTORY
           cd postgres-pgadmin && ls -la
-    - name: Make all the scripts executable
-      run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
           chmod +x *.sh
-      shell: bash -l {0}
-    - name: Running the postgres & pgadmin scripts
-      run: # RUN POSTGRES SCRIPTS IN THE CURRENT DIRECTORY
           ./postgres.sh
       shell: bash -l {0}
     - name: Stop all running containers
       run:
           ./stop.sh
+      shell: bash -l {0}
+
+# The above snippet is from .github/workflows/docker-image.yml
