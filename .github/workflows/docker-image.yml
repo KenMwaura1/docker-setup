@@ -20,7 +20,7 @@ jobs:
     - name: Make all the scripts executable
       run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
           chmod +x *.sh
-      shell: bash\
+      shell: bash
     - name: Cd into the postgres directory
       run: # CD INTO THE POSTGRES DIRECTORY
           cd postgres-pgadmin
