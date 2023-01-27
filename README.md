@@ -75,7 +75,6 @@ sudo pacman -S docker-compose
 The shell scripts in the root directory are used to spin up the containers. The scripts are named after the service they spin up. For example, to spin up the mongo container, run the following command:
 
 ```bash  
-```bash  
 ./mongo.sh
 ```
 
