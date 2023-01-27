@@ -9,47 +9,34 @@ echo "Current directory: $DIR"
 # SHOW ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
 echo "Shell scripts in the current directory:"
 find $DIR -type f -name "*.sh" -exec basename {} \;
+break
+
+count1=ls -1 *.sh 2>/dev/null | wc -l
+for file in $DIR/*.sh
+do
+	echo "Running $file"
+	$file
+	count1=$((count1 + 1))
+done
+
+echo "Found $count11 shell scripts"
 
 
 # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
 echo "Running all shell scripts in the current directory:"
-find $DIR -type f -name "*.sh" -exec basename {} \; -exec sh {} \;
+for	count1 in $DIR/*.sh
+do
+	echo "Running $count1"
+	$count1
+	count1=$((count1 + 1))
 
-# stop all the running containers
-echo "Stopping all the running containers"
-docker stop $(docker ps -a -q)
+done
 
-# Remove all the stopped containers
-echo "Removing all the stopped containers"
-docker rm $(docker ps -a -q)
+echo "Ran $count1 shell scripts"
 
-# Remove all the images
-echo "Removing all the images"
-docker rmi $(docker images -q)
-
-# Remove all the volumes
-echo "Removing all the volumes"
-docker volume rm $(docker volume ls -q)
-
-# Remove all the networks
-echo "Removing all the networks"
-docker network rm $(docker network ls -q)
-
-# Remove all the dangling images
-echo "Removing all the dangling images"
-docker rmi $(docker images -f "dangling=true" -q)
-
-# Remove all the dangling volumes
-echo "Removing all the dangling volumes"
-docker volume rm $(docker volume ls -f "dangling=true" -q)
-
-# Remove all the dangling networks
-echo "Removing all the dangling networks"
-docker network rm $(docker network ls -f "dangling=true" -q)
-
-# Remove all the dangling containers
-echo "Removing all the dangling containers"
-docker rm $(docker ps -a -f "status=exited" -q)
-
+if [ $count1 -eq 0 ]
+then
+	echo "No shell scripts found in the current directory"
+fi
 
 
