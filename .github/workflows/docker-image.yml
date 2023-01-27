@@ -1,0 +1,29 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Change into postgres-pgadmin directory
+      run: | # CHANGE INTO THE POSTGRES-PGADMIN4 DIRECTORY
+          cd postgres-pgadmin && ls -la
+          chmod +x *.sh
+          ./postgres.sh
+      shell: bash -l {0}
+    - name: Stop all running containers
+      run:
+          ./stop.sh
+      shell: bash -l {0}
+
+# The above snippet is from .github/workflows/docker-image.yml

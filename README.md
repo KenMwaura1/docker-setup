@@ -2,6 +2,8 @@
 
 This repo holds the config files and commands to spin up development containers for my personal setup. 
 
+[![Script Test CI](https://github.com/KenMwaura1/docker-setup/actions/workflows/script-test.yml/badge.svg)](https://github.com/KenMwaura1/docker-setup/actions/workflows/script-test.yml)
+
 **Note**: This is a work in progress. I will be adding more containers as I go along. Feel free to contribute! 
 
 ## Table of Contents
