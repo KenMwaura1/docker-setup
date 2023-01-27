@@ -19,4 +19,5 @@ jobs:
 
     - name: Run build
       run: make build
+      shell: bash
       
