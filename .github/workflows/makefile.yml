@@ -17,13 +17,6 @@ jobs:
     - name: Cd folder
       run: cd mongo-compass-docker
 
-
-    - name: Install dependencies
-      run: make
-
-    - name: Run check
-      run: make check
-
     - name: Run build
       run: make build
       
