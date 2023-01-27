@@ -26,7 +26,6 @@ echo "Running all shell scripts in the current directory:"
 		echo "Running $count1: $file"
 		./$file
 		c1=$((c1 + 1))
-		# echo "Ran $c1: $file"
 		echo $c1
 		if [[ $c1 -eq 9 ]]
 		then
