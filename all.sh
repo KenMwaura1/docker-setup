@@ -25,8 +25,8 @@ for	file in $scripts
 do
 	echo "Running $count1: $file"
 	./$file
-	break
 	c1=$((c1 + 1))
+	break
 	if [ $c1 -eq $count1 ]
 	then
 		echo "Ran all $count1 shell scripts"

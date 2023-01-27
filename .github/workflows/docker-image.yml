@@ -14,15 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Make all the scripts executable
-      run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
-          chmod +x *.sh
+    
     - name: Change into postgres-pgadmin directory
       run: # CHANGE INTO THE POSTGRES-PGADMIN4 DIRECTORY
           cd postgres-pgadmin && ls -la
-    - name: Show current directory
-      run: pwd && ls -la
-      shell: bash
+    - name: Make all the scripts executable
+      run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
+          chmod +x *.sh
     - name: Running the postgres & pgadmin scripts
       run: # RUN POSTGRES SCRIPTS IN THE CURRENT DIRECTORY
           ./postgres.sh
