@@ -17,17 +17,13 @@ jobs:
     - name: Show current directory
       run: pwd && ls -la
       shell: bash
-    - name: Show all scripts
-      run: # SHOW ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
-          find $DIR -type f -name "*.sh" -exec basename {} \;
-      shell: bash
-    - name: Make all scripts executable
+    - name: Make all the scripts executable
       run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
-          find $DIR -type f -name "*.sh" -exec basename {} \; -exec chmod +x {} \;
+          chmod +x *.sh
       shell: bash
-    - name: Running the Scripts
+    - name: Running the all the Scripts
       run: # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
-          find $DIR -type f -name "*.sh" -exec basename {} \; -exec sh {} \;
+          ./all.sh
       shell: bash
     - name: Stop all running containers
       run:
