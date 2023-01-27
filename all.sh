@@ -25,6 +25,7 @@ for	file in $scripts
 do
 	echo "Running $count1: $file"
 	./$file
+	break
 	c1=$((c1 + 1))
 	if [ $c1 -eq $count1 ]
 	then
