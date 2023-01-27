@@ -29,4 +29,7 @@ jobs:
       run: # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
           find $DIR -type f -name "*.sh" -exec basename {} \; -exec sh {} \;
       shell: bash
-    
+    - name: Stop all running containers
+      run:
+          ./stop.sh
+      shell: bash
