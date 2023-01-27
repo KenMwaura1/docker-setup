@@ -19,10 +19,3 @@ find $DIR -type f -name "*.sh" -exec chmod +x {} \;
 echo "Running all shell scripts in the current directory:"
 find $DIR -type f -name "*.sh" -exec basename {} \; -exec sh {} \;
 
-# Run all shell scripts in the current directory
-# Get the current directory
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Show directory name
-echo "Current directory: $DIR"
-
