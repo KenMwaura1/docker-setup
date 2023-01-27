@@ -21,18 +21,19 @@ echo "Found $count1 shell scripts"
 
 # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
 echo "Running all shell scripts in the current directory:"
-for	file in $scripts
-do
-	echo "Running $count1: $file"
-	./$file
-	c1=$((c1 + 1))
-	echo "Ran $c1: $file"
-	if [ $c1 -eq $count1 ]
-	then
-		echo "Ran all $c1 shell scripts"
-		break
-	fi
-done
+	for	file in $scripts
+	do
+		echo "Running $count1: $file"
+		./$file
+		c1=$((c1 + 1))
+		# echo "Ran $c1: $file"
+
+		if [[ $c1 -eq   $count1 ]]
+		then
+			echo "Ran all $c1 shell scripts"
+			break
+		fi
+	done
 
 
 echo "Ran $c1 shell scripts"
