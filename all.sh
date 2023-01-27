@@ -26,16 +26,16 @@ do
 	echo "Running $count1: $file"
 	./$file
 	c1=$((c1 + 1))
-	break
+	echo "Ran $c1: $file"
 	if [ $c1 -eq $count1 ]
 	then
-		echo "Ran all $count1 shell scripts"
+		echo "Ran all $c1 shell scripts"
 		break
 	fi
 done
 
 
-echo "Ran $count1 shell scripts"
+echo "Ran $c1 shell scripts"
 
 if [ $count1 -eq 0 ]
 then
