@@ -19,17 +19,14 @@ jobs:
       shell: bash
     - name: Show all scripts
       run: # SHOW ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
-          echo "Shell scripts in the current directory:"
           find $DIR -type f -name "*.sh" -exec basename {} \;
       shell: bash
     - name: Make all scripts executable
       run: # MAKE ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY EXECUTABLE
-          echo "Making all shell scripts in the current directory executable:"
           find $DIR -type f -name "*.sh" -exec basename {} \; -exec chmod +x {} \;
       shell: bash
     - name: Running the Scripts
       run: # RUN ALL SHELL SCRIPTS IN THE CURRENT DIRECTORY
-          echo "Running all shell scripts in the current directory:"
           find $DIR -type f -name "*.sh" -exec basename {} \; -exec sh {} \;
       shell: bash
     
