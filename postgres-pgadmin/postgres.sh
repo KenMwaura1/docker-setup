@@ -7,7 +7,7 @@ docker run --publish 5050:5050 \
              --hostname="pgadmin4" \
              --network="pgnetwork" \
              --detach \
-           registry.developers.crunchydata.com/crunchydata/crunchy-pgadmin4:centos8-13.6-4.7.5
+           crunchydata/crunchy-pgadmin4:centos8-13.6-4.7.5
 
 docker run --publish 5432:5432 \
              --volume=postgres:/pgdata \
@@ -16,4 +16,4 @@ docker run --publish 5432:5432 \
              --hostname="postgres" \
              --network="pgnetwork" \
              --detach \
-           registry.developers.crunchydata.com/crunchydata/crunchy-postgres:centos8-13.6-4.7.5
+           crunchydata/crunchy-postgres:centos8-13.6-4.7.5
