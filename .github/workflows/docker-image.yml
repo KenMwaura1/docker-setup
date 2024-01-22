@@ -20,6 +20,8 @@ jobs:
           cd postgres-pgadmin && ls -la
           chmod +x *.sh
           ./postgres.sh
+
+      
       shell: bash -l {0}
     - name: Stop all running containers
       run:

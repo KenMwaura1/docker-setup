@@ -33,6 +33,7 @@ This repo holds the config files and commands to spin up development containers 
 - [influxdb](https://www.influxdata.com/)
 - [grafana](https://grafana.com/)
 - [prometheus](https://prometheus.io/)
+- [ghost](https://ghost.org/)
   
 
 ### Prerequisites
