@@ -13,7 +13,13 @@ mongo-compass-docker/
 
 # Distribution / packaging
 .Python
-build/
+# Jellyfin
+jellyfin/
+config/jellyfin/
+cache/jellyfin/
+log/jellyfin/
+*.jellyfin
+jellyfin-*.logbuild/
 develop-eggs/
 dist/
 downloads/
