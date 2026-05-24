@@ -1,0 +1,26 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - TZ=Africa/Nairobi
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card1:/dev/dri/card1
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      # Media folders
+      - /home/zoo/Downloads/Torrents:/media/downloads
+      - /mnt/z2/Torrents:/media/torrents
+      - /mnt/z2/anime:/media/anime
+      - /mnt/z2/K-Drama/:/media/K-Drama
+      - /home/zoo/Downloads/Video/:/media/Video
+    ports:
+      - 8096:8096
+    # runtime: nvidia
+    group_add:
+      - "video"
+    restart: unless-stopped

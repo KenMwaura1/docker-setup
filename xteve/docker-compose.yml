@@ -1,0 +1,15 @@
+version: '3'
+services:
+  xteve:
+    image: alturismo/xteve
+    container_name: xteve
+    ports:
+      - "34400:34400"
+    volumes:
+      - ./xteve_data:/home/xteve/conf
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - XTEVE_PORT=34400
+      - XTEVE_LOG=INFO
+    restart: unless-stopped
+
